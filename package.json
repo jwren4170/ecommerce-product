@@ -6,7 +6,7 @@
 	"scripts": {
 		"sass": "sass -w  src/scss/main.scss:assets/css/style.css",
 		"tsc": "tsc -w",
-		"start": "npm-run-all --parallel sass tsc"
+		"dev": "npm-run-all --parallel sass tsc"
 	},
 	"author": "",
 	"license": "ISC",

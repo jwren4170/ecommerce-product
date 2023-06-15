@@ -21,10 +21,6 @@
 
 		<!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
 		<style>
-			.container {
-				max-width: 1024px;
-				margin: 0 auto;
-			}
 			.attribution {
 				font-size: 11px;
 				text-align: center;
@@ -37,14 +33,14 @@
 	<body>
 		<div class="container">
 			<header>
-				<nav class="main-menu">
+				<nav class="nav-bar">
 					<div class="logo">
 						<img
 							src="./assets/images/logo.svg"
 							alt="Sneakers Logo" />
 					</div>
-					<div class="menu-items">
-						<ul>
+					<div class="menu">
+						<ul class="menu-items">
 							<li><a href="#"></a>Collections</li>
 							<li><a href="#"></a>Men</li>
 							<li><a href="#"></a>Women</li>
@@ -52,18 +48,19 @@
 							<li><a href="#"></a>Contact</li>
 						</ul>
 					</div>
-					<div class="cart avatar">
+					<div class="cart-area">
 						<img
+							class="cart-area-icon"
 							src="./assets/images/icon-cart.svg"
 							alt="Icon shopping cart" />
 						<img
-							class="avatar"
+							class="cart-area-user-avatar"
 							src="./assets/images/image-avatar.png"
 							alt="Users Avatar" />
 					</div>
 				</nav>
-				<hr />
 			</header>
+			<hr />
 			<main class="main">
 				<section class="light-box">
 					<div class="row">

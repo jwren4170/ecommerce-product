@@ -87,5 +87,54 @@ select {
     scroll-behavior: auto !important;
   }
 }
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+header {
+  padding-block: 1.5625rem;
+}
+
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu {
+  margin-inline-start: 3.125rem;
+  width: 65%;
+}
+
+.menu-items {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  list-style: none;
+  height: 1.875rem;
+}
+
+.menu-items li {
+  display: block;
+  margin-right: 1.5625rem;
+  color: hsl(219, 9%, 45%);
+  cursor: pointer;
+}
+
+.cart-area {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  width: 15%;
+}
+.cart-area-icon {
+  max-height: 1.25rem;
+  margin-inline-end: 3.125rem;
+}
+.cart-area-user-avatar {
+  width: 3.125rem;
+  height: 3.125rem;
+}
 
 /*# sourceMappingURL=style.css.map */
