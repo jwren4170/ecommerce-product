@@ -18,17 +18,6 @@
 		<link rel="stylesheet" href="./assets/css/style.css" />
 
 		<title>Frontend Mentor | E-commerce product page</title>
-
-		<!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-		<style>
-			.attribution {
-				font-size: 11px;
-				text-align: center;
-			}
-			.attribution a {
-				color: hsl(228, 45%, 44%);
-			}
-		</style>
 	</head>
 	<body>
 		<div class="container">
@@ -41,20 +30,26 @@
 					</div>
 					<div class="menu">
 						<ul class="menu-items">
-							<li><a href="#"></a>Collections</li>
-							<li><a href="#"></a>Men</li>
-							<li><a href="#"></a>Women</li>
-							<li><a href="#"></a>About</li>
-							<li><a href="#"></a>Contact</li>
+							<li
+								><a href="#" title="navigation"></a
+								>Collections</li
+							>
+							<li><a href="#" title="navigation"></a>Men</li>
+							<li><a href="#" title="navigation"></a>Women</li>
+							<li><a href="#" title="navigation"></a>About</li>
+							<li><a href="#" title="navigation"></a>Contact</li>
+							<li> </li>
 						</ul>
 					</div>
-					<div class="cart-area">
+					<div class="cart-icon">
 						<img
-							class="cart-area-icon"
+							class="cart-icon-image"
 							src="./assets/images/icon-cart.svg"
 							alt="Icon shopping cart" />
+					</div>
+					<div class="user-avatar">
 						<img
-							class="cart-area-user-avatar"
+							class="user-avatar-image"
 							src="./assets/images/image-avatar.png"
 							alt="Users Avatar" />
 					</div>
@@ -62,105 +57,70 @@
 			</header>
 			<hr />
 			<main class="main">
-				<section class="light-box">
-					<div class="row">
-						<div class="col">
-							<img
-								src="./assets/images/image-product-1.jpg"
-								onclick="openLightbox();toSlide(1)"
-								class="hover-shadow preview"
-								alt="Sneakers with one standing on toe." />
-						</div>
-						<div class="col">
-							<img
-								src="./assets/images/image-product-2.jpg"
-								onclick="openLightbox();toSlide(2)"
-								class="hover-shadow preview"
-								alt="Sneakers on smooth stones." />
-						</div>
-						<div class="col">
-							<img
-								src="./assets/images/image-product-3.jpg"
-								onclick="openLightbox();toSlide(3)"
-								class="hover-shadow preview"
-								alt="Sneakers on smooth stones with twig." />
-						</div>
-						<div class="col">
-							<img
-								src="./assets/images/image-product-4.jpg"
-								onclick="openLightbox();toSlide(3)"
-								class="hover-shadow preview"
-								alt="One sneaker with heal balanced on smooth stones." />
-						</div>
+				<section id="myModal" class="modal">
+					<span class="close cursor" onclick="closeModal()"
+						>&times;</span
+					>
+
+					<div class="mySlides">
+						<img
+							src="./assets/images/image-product-1.jpg"
+							alt="Sneakers" />
 					</div>
 
-					<div id="Lightbox" class="modal">
-						<span class="close pointer" onclick="closeLightbox()"
-							>&times;</span
-						>
-						<div class="modal-content">
-							<div class="slide">
-								<img
-									src="./assets/images/image-product-1-thumbnail.jpg"
-									class="image-slide"
-									alt="Sneakers with one standing on toe." />
-							</div>
-							<div class="slide">
-								<img
-									src="./assets/images/image-product-2-thumbnail.jpg"
-									class="image-slide"
-									alt="Sneakers on smooth stones." />
-							</div>
-							<div class="slide">
-								<img
-									src="./assets/images/image-product-3-thumbnail.jpg"
-									class="image-slide"
-									alt="Sneakers on smooth stones with twig." />
-							</div>
-							<div class="slide">
-								<img
-									src="./assets/images/image-product-4-thumbnail.jpg"
-									class="image-slide"
-									alt="One sneaker with heal balanced on smooth stones." />
-							</div>
+					<div class="mySlides">
+						<img
+							src="./assets/images/image-product-2.jpg"
+							alt="Sneakers" />
+					</div>
 
-							<a class="previous" onclick="changeSlide(-1)"
-								>&#10094;</a
-							>
-							<a class="next" onclick="changeSlide(1)"
-								>&#10095;</a
-							>
+					<div class="mySlides">
+						<img
+							src="./assets/images/image-product-3.jpg"
+							alt="Sneakers" />
+					</div>
 
-							<div class="dots">
-								<div class="col">
-									<img
-										src="./assets/images/image-product-1-thumbnail.jpg"
-										class="modal-preview hover-shadow"
-										onclick="toSlide(1)"
-										alt="Sneakers with one standing on toe" />
-								</div>
-								<div class="col">
-									<img
-										src="./assets/images/image-product-2-thumbnail.jpg"
-										class="modal-preview hover-shadow"
-										onclick="toSlide(2)"
-										alt="Sneakers on smooth stones." />
-								</div>
-								<div class="col">
-									<img
-										src="./assets/images/image-product-3-thumbnail.jpg"
-										class="modal-preview hover-shadow"
-										onclick="toSlide(3)"
-										alt="Sneakers on smooth stones with twig." />
-								</div>
-								<div class="col">
-									<img
-										src="./assets/images/image-product-4-thumbnail.jpg"
-										class="modal-preview hover-shadow"
-										onclick="toSlide(3)"
-										alt="One sneaker with heal balanced on smooth stones." />
-								</div>
-							</div>
+					<div class="mySlides">
+						<img
+							src="./assets/images/image-product-4.jpg"
+							alt="Sneakers" />
+					</div>
+
+					<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+					<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+					<div class="columns">
+						<div class="column">
+							<img
+								class="demo cursor"
+								src="./assets/images/image-product-1-thumbnail.jpg"
+								alt="Sneakers"
+								onclick="currentSlide(1)"
+								alt="Sneakers" />
+						</div>
+						<div class="column">
+							<img
+								class="demo cursor"
+								src="./assets/images/image-product-2-thumbnail.jpg"
+								alt="Sneakers"
+								onclick="currentSlide(2)"
+								alt="Sneakers" />
+						</div>
+						<div class="column">
+							<img
+								class="demo cursor"
+								src="./assets/images/image-product-3-thumbnail.jpg"
+								alt="Sneakers"
+								onclick="currentSlide(3)"
+								alt="Sneakers" />
+						</div>
+						<div class="column">
+							<img
+								class="demo cursor"
+								src="./assets/images/image-product-4-thumbnail.jpg"
+								alt="Sneakers"
+								onclick="currentSlide(4)"
+								alt="Sneakers" />
 						</div>
 					</div>
 				</section>
@@ -175,7 +135,7 @@
 						</div>
 						<div class="card-body">
 							<div class="content">
-								<p class="description">
+								<p class="desc">
 									These low-profile sneakers are your perfect
 									casual wear companion. Featuring a durable
 									rubber outer sole, they’ll withstand
@@ -184,15 +144,19 @@
 								<p class="price">
 									$125.00
 									<span class="marked-down">50%</span>
-									<span class="original-price-strike-through">
+									<div class="original-price-strike-through">
 										$250.00
-									</span>
+									</div>
 								</p>
 							</div>
 						</div>
 						<div class="card-footer">
-							<button class="btn-add-remove">0</button>
-							<button class="btn-add-to-cart">Add to cart</button>
+							<button type="button" class="btn-add-remove"
+								>0</button
+							>
+							<button type="button" class="btn-add-to-cart"
+								>Add to cart</button
+							>
 						</div>
 					</div>
 				</section>
@@ -200,10 +164,14 @@
 		</div>
 
 		<footer class="footer">
-			<!-- <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div> -->
+			<div class="attribution">
+				Challenge by
+				<a
+					href="https://www.frontendmentor.io?ref=challenge"
+					target="_blank"
+					>Frontend Mentor</a
+				>. Coded by <a href="github.com/jwren4170">Your Name Here</a>.
+			</div>
 		</footer>
 	</body>
 </html>
